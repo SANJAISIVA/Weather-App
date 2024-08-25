@@ -1,0 +1,38 @@
+.daily-item .day {
+    cursor: inherit;
+    color: #212121;
+    font-weight: 600;
+    text-align: start;
+    flex: 1 1;
+    margin-left: 20px;
+}
+
+.daily-item .date{
+    text-align: center;
+    flex: 1 1;
+}
+
+.daily-details-grid-item-date{
+    display: none;
+}
+
+footer {
+    text-align: center;
+    background-color: violet;
+}
+
+@media (max-width: 500px){
+    .daily-item .date {
+        display: none;
+    }
+}
+
+@media (max-width: 410px){
+    .title {
+        font-size: 18px;
+    }
+    .multi-select-button {
+        width: 130px;
+        height: 17px;
+    }
+}
