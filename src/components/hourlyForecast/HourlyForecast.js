@@ -10,7 +10,7 @@ const HourlyForecast = (  ) => {
    const [selected, setSelected] = useState(null);
 
    const handleSingleSelect = (index) => {
-     console.log(index);
+    //  console.log(index);
      setSelected(index === selected ? null : index );
    }
 
@@ -23,10 +23,10 @@ const HourlyForecast = (  ) => {
      if(findIndexOfCurrent === -1){
        tempArray.push(index);
      } else{
-       tempArray.splice(index, 1);
+       tempArray.splice(findIndexOfCurrent, 1);
      }
      setMultiSelectedItems(tempArray);
-     console.log(tempArray);
+    //  console.log(tempArray);
    }
 
    // button data and color
@@ -46,7 +46,7 @@ const HourlyForecast = (  ) => {
    }
 
   if (!forecastResults || !forecastResults.list) {
-    console.log("No forecast data available");
+    // console.log("No forecast data available");
     return <></>;
   }
 
@@ -55,7 +55,12 @@ const HourlyForecast = (  ) => {
     <div className="forecast-container">
         <div className="forecast-header">
           <label className="title">Hourly Forecast</label>
-          <button onClick={() => {setMultiSelect(!multiSelect); changeButtonData() } } className="multi-select-button" style={{ backgroundColor: buttonColor }}>{buttonData}</button>
+          {/* <button onClick={() => {setMultiSelect(!multiSelect); changeButtonData() } } className="multi-select-button" style={{ backgroundColor: buttonColor }}>{buttonData}</button> */}
+          <div class="container">
+                <input type="checkbox" id="check" className="button-input" onClick={() => setMultiSelect(!multiSelect)}/>
+                <label for="check" class="switch"></label>
+                <label className="multi-view">Multi View</label>
+          </div>
         </div>
 
         {

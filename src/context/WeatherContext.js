@@ -35,6 +35,7 @@ export const DataProvider = ( { children } ) => {
                 alert(`${city} not found😓. Enter right city`);
                 return;
             }
+            console.log("Weather Data", weatherData);
             setWeatherResults(weatherData);
             
             const forecastFetch = await fetch(`${WEATHER_API_URL}/forecast?q=${city}&appid=${WEATHER_API_KEY}&units=metric`);
@@ -91,9 +92,7 @@ export const DataProvider = ( { children } ) => {
           if (hours > 12) hours -= 12;
       } else if(hours === 0){
           hours = 12;
-      }
-      console.log(hours+suffix);
-    
+      }    
       return `${hours}:${minutes} ${suffix}`;
     }
 

@@ -4,7 +4,6 @@ import WeatherContext from '../../context/WeatherContext';
 const PresentDayForecast = ( ) => {
 
   const {weatherResults} = useContext(WeatherContext);
-  console.log(weatherResults);
   const [weatherColor, setWeatherColor] = useState('lightblue'); 
   const [textColor, setTextColor] = useState('white')
 
