@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  font-family:  'Poppins', 'Open sans', sans-serif;
+  font-family:  'Open sans','Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

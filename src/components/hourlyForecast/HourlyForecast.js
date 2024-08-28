@@ -29,27 +29,10 @@ const HourlyForecast = (  ) => {
     //  console.log(tempArray);
    }
 
-   // button data and color
-   const [buttonData, setButtonData] = useState('Enable Multi View')
-   const [buttonColor, setButtonColor] = useState('greenyellow')
-
-   const changeButtonData = () => {
-     if(buttonData === 'Enable Multi View')
-     {
-       setButtonData('Disable Multi View');
-       setButtonColor('red')
-     }
-     else{
-       setButtonData('Enable Multi View');
-       setButtonColor('greenyellow')
-     }
-   }
-
   if (!forecastResults || !forecastResults.list) {
     // console.log("No forecast data available");
     return <></>;
   }
-
 
   return (
     <div className="forecast-container">
